@@ -24,14 +24,15 @@ $uid=$_SESSION['sid'];
     $info=$row['info'];
     
 
-    if($q)
+    if($info!='')
 	{
         $message = "Your notes for today are :  $info";
         echo "<script type='text/javascript'>alert('$message');</script>";
 	}
-     else
+     elseif($info=='')
      {
-	 	alert("You have no messages.");
+			$message = "You have no notes for today";
+            echo "<script type='text/javascript'>alert('$message');</script>";
      }
     
      //header("Location:home.php");

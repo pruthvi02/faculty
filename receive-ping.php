@@ -21,14 +21,15 @@ $uid=$_SESSION['sid'];
     $sender=$row['sender'];
     
 
-    if($q)
+    if($sender!='')
 	{
         $message = "You received a ping from:  $sender";
         echo "<script type='text/javascript'>alert('$message');</script>";
 	}
-     else
+     elseif($sender=='')
      {
-	 	alert("You have no messages.");
+		$message = "You have no messages from other faculties";
+		echo "<script type='text/javascript'>alert('$message');</script>";
      }
     
      //header("Location:home.php");

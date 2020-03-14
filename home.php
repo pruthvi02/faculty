@@ -1,5 +1,5 @@
 <?php 
-
+error_reporting(E_ALL ^ E_NOTICE);  
 session_start();
 include('dbconnect.php');
 //include('register.php');
@@ -72,6 +72,7 @@ include('dbconnect.php');
 
 						<a href="check-tutorial.php" class="nav-item nav-link">Check Tutorial</a>
 
+						<a href="statistics.html" class="nav-item nav-link">Tutorial Statistics</a>
 
 						<!-- <a href="display1.php" class="nav-item nav-link">view</a> -->
 
@@ -138,27 +139,36 @@ include('dbconnect.php');
 			$row=mysqli_fetch_array($q);
 			$period = array('period1', 'period2', 'period3', 'period4', 'period5','period6','period7','period8');
 			$i=0;
+			$flag=0;
 			while($i<8)
 	{
 	$p=$period[$i];
-	$per=$row[$p];
-	if(strcmp($per,$ssubject)==0){
-	$fin=$p;
-	$i++;
+	
+	if($row[$p]=='')
+	{
+		$flag+=1;
+		$i++;
 	}
 	else{
-		$i++;
-		continue;
-	}
-	
+		$per=$row[$p];
+		if(strcmp($per,$ssubject)==0){
+			$fin=$p;
+			$i++;
+			}
+			else{
+				$i++;
+				continue;
+			}
+		}
+		if($flag==8)
+		echo "you have no classes today";	
 }
-
 ?>
 
 
 <script>
 function myFunction() {
-	alert(  "Today's Subject,location and time:  <?php  echo $ssubject," ",$clr ," ",$fin?>");
+	alert(  "Subject,Location and Time:  <?php  echo $ssubject," ",$clr ," ",$fin?>");
   
 }
 </script>
