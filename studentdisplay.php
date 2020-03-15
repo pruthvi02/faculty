@@ -1,19 +1,9 @@
-<?php
-// session_start();
- include('dbconnect.php');  
-   $nid = $_POST['CR'];
+<html>
+    <body background='images/bg-06.jpg')>
+</body>
+</html>
 
-
-
-        $sql = "SELECT * FROM teacher_info WHERE name='$nid'";
-        $run_query=mysqli_query($conn,$sql);
-        $row=mysqli_fetch_array($run_query);
-        $name=$row['name'];
-        $phone=$row['phone'];
-        $cabin=$row['cabin'];
-        $ssubject=$row['subject'];
-
-?>
+<div style="background-image: url('images/bg-06.jpg');
 <div id="TT" style="background-color: #FFFFFF">
         <table border="2" style="align: center" id="timetable">
             <caption><strong><br><br>
@@ -32,6 +22,23 @@
             </tr>
             <tr>
                 <?php
+
+include('dbconnect.php');  
+$nid = $_POST['CR'];
+
+
+
+     $sql = "SELECT * FROM teacher_info WHERE name='$nid'";
+     $run_query=mysqli_query($conn,$sql);
+     $row=mysqli_fetch_array($run_query);
+     $name=$row['name'];
+     $phone=$row['phone'];
+     $cabin=$row['cabin'];
+     $ssubject=$row['subject'];
+
+
+
+
     
                 $qq = mysqli_query($conn,
                 "SELECT * FROM " . $name ."");
@@ -56,7 +63,9 @@
           </tr>\n";
               }
 
-              
+              echo " <h3> FACULTY CONTACT NO: $phone </h3>";
+              echo " <h3> FACULTY CABIN NUMBER: $cabin </h3>";
+              echo " <h3> FACULTY AREA OF SPECIALIZATION: $ssubject </h3>";
                
                 ?>
                 <style>
@@ -65,13 +74,6 @@
                 left: 730px;
                 top: 225px;
                 }
-</style>
-
-<?php
-                echo " <h3> FACULTY CONTACT NO: $phone </h3>";
-                echo " <h3> FACULTY CABIN NUMBER: $cabin </h3>";
-                echo " <h3> FACULTY AREA OF SPECIALIZATION: $ssubject </h3>";
-?>
-                <button type="button">download</button>
-                
+</style>        
     </div>
+            </div>

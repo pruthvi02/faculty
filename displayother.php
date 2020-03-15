@@ -1,18 +1,9 @@
-<?php
-session_start();
-include('dbconnect.php');  
-    $nid = $_POST['CR'];
+<html>
+    <body background='images/bg-06.jpg')>
+</body>
+</html>
 
-
-
-        $sql = "SELECT * FROM teacher_info WHERE name='$nid'";
-        $run_query=mysqli_query($conn,$sql);
-        $row=mysqli_fetch_array($run_query);
-        $name=$row['name'];
-        $phone=$row['phone'];
-
-
-?>
+<div style="background-image: url('images/bg-06.jpg');
 <div id="TT" style="background-color: #FFFFFF">
         <table border="2" style="align: center" id="timetable">
             <caption><strong><br><br>
@@ -30,7 +21,21 @@ include('dbconnect.php');
                 <th id="p8" style="text-align:center">period8</th>
             </tr>
             <tr>
-                <?php
+                <?php   
+
+
+session_start();
+include('dbconnect.php');  
+    $nid = $_POST['CR'];
+
+
+
+        $sql = "SELECT * FROM teacher_info WHERE name='$nid'";
+        $run_query=mysqli_query($conn,$sql);
+        $row=mysqli_fetch_array($run_query);
+        $name=$row['name'];
+        $phone=$row['phone'];
+
     
                 $qq = mysqli_query($conn,
                 "SELECT * FROM " . $name ."");
@@ -69,10 +74,9 @@ include('dbconnect.php');
             <?php
                 echo " <h3> FACULTY CONTACT NO: $phone </h3>";
 ?>
-
-                <button type="button">download</button>
                 
     </div>
+            </div>
 
 
                 

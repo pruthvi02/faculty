@@ -57,7 +57,6 @@ for($i =0; $i <3 ; $i++)
     }
     else{
         $flag=0;
-        continue;
     }
 }
 if($flag==1){

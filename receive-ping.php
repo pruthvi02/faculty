@@ -31,8 +31,6 @@ $uid=$_SESSION['sid'];
 		$message = "You have no messages from other faculties";
 		echo "<script type='text/javascript'>alert('$message');</script>";
      }
-    
-     //header("Location:home.php");
 
     ?>
     

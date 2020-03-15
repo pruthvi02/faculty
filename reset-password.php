@@ -69,9 +69,7 @@ return true;
 							</legend>
 							<p>
 								Please set your new password.<br />
-								<!-- <span style="color:red;">
 								
-							</span> -->
 							</p>
 
 <div class="form-group">
@@ -130,5 +128,4 @@ return true;
 		</script>
 	
 	</body>
-	<!-- end: BODY -->
 </html>

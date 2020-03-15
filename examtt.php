@@ -10,6 +10,12 @@ $sid=$_SESSION['sid'];
 
 
 ?>
+<html>
+    <body background='images/bg-06.jpg')>
+</body>
+</html>
+
+<div style="background-image: url('images/bg-06.jpg');
 <div id="TT" style="background-color: #FFFFFF">
         <table border="2" style="align: center" id="timetable">
             <caption><strong><br><br>
@@ -45,7 +51,6 @@ $sid=$_SESSION['sid'];
                 left: 730px;
                 top: 225px;
                 }
-</style>
-                <button type="button">download</button>
-                
+</style>               
     </div>
+            </div>

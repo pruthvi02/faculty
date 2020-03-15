@@ -1,19 +1,6 @@
 <?php 
 
-//session_start();
-include('dbconnect.php');
-
-
-
-//  $uid=$_SESSION['sid'];
-
-// 					 $sql="SELECT * FROM teacher_info WHERE tid='$uid'";
-// 					$run_query=mysqli_query($conn,$sql);
-// 				     $res=mysqli_query($conn,$sql);
-                    
-
-
-					
+include('dbconnect.php');					
 					
 ?>
 <!DOCTYPE html>
@@ -45,8 +32,8 @@ include('dbconnect.php');
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 <!--===============================================================================================-->
 </head>
-<body>
-<div style="background-image: url('images/bg-02.jpg');">
+<body background='images/bg-06.jpg')>
+<div>
 
 	<div class="limiter">
 		
@@ -55,16 +42,6 @@ include('dbconnect.php');
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-            
-                <!-- <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav">
-                        <a href="#" class="nav-item nav-link active">Home </a>
-						<a href="profile.php" class="nav-item nav-link">Profile</a>
-						<a href="display1.php" class="nav-item nav-link">view</a>
-						<a href="logout.php" class="nav-item nav-link">Logout</a>
-                    </div>
-					<div class="form-group"> -->
-
 					<form class="form-inline ml-auto" action="studentdisplay.php" method="post">
 					
 		<select name="CR" class="list-group-item" >

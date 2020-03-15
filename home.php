@@ -2,7 +2,6 @@
 error_reporting(E_ALL ^ E_NOTICE);  
 session_start();
 include('dbconnect.php');
-//include('register.php');
 
 
 
@@ -50,36 +49,34 @@ include('dbconnect.php');
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 <!--===============================================================================================-->
 </head>
-<body>
-<div style="background-image: url('images/bg-02.jpg');">
+<body background='images/bg-06.jpg')>
+<div>
 
 	<div class="limiter">
 		
 			<nav class="navbar navbar-expand-md navbar-dark	 bg-dark">
-                <a href="display1.php" class="navbar-brand">Timetable</a>
+                <a href="display1.php" class="navbar-brand" title="click to view your timetable">Timetable</a>
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>
                 </button>
             
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav">
-						<a href="logout.php" class="nav-item nav-link">Logout</a>
-						<a href="profile.php" class="nav-item nav-link">Profile</a>
+						<a href="logout.php" class="nav-item nav-link" >Logout</a>
+						<a href="profile.php" class="nav-item nav-link" title="click to view/update your profile">Profile</a>
 						<a href="notes.html" class="nav-item nav-link">Write Notes</a>
-						<a href="checknotes.php" class="nav-item nav-link">Check Notes</a>
+						<a href="checknotes.php" class="nav-item nav-link" title="click to view your notes for today">Check Notes</a>
 
-						<a href="tutorial.html" class="nav-item nav-link">Schedule Tutorial</a>
+						<a href="Schedule-tutorial.html" class="nav-item nav-link" title="plan for a tutorial">Schedule Tutorial</a>
 
-						<a href="check-tutorial.php" class="nav-item nav-link">Check Tutorial</a>
+						<a href="check-tutorial.php" class="nav-item nav-link" title="click to get a notification about scheduled tutorial">Check Tutorial</a>
 
-						<a href="statistics.html" class="nav-item nav-link">Tutorial Statistics</a>
+						<a href="statistics.html" class="nav-item nav-link" title="enter/check marks of students">Tutorial Statistics</a>
 
-						<!-- <a href="display1.php" class="nav-item nav-link">view</a> -->
+						<a href="ping.php" class="nav-item nav-link" title="click to send a message">Ping</a>
+						<a href="receive-ping.php" class="nav-item nav-link" title="click to check inbox">Messages</a>
 
-						<a href="ping.php" class="nav-item nav-link">Ping</a>
-						<a href="receive-ping.php" class="nav-item nav-link">Messages</a>
-
-						<a href="examtt.php" class="nav-item nav-link">Exam timetable</a>
+						<a href="examtt.php" class="nav-item nav-link" title="click for Exam Timetable">Exam timetable</a>
 						
                     </div>
 					<div class="form-group">
@@ -112,17 +109,6 @@ include('dbconnect.php');
 				</form>
 
 		</div>
-
-		<!-- <div  class="form-group" >
-
-
-			<form method="post", class="form-inline ml-auto"> 
-			<p>  Messages:</p>
-					   <input type="submit" name="button1" onclick="myFunction1()" value="CHECK"/>  
-
-	   </form>
-
-                </div> -->
             </nav>
             
 	</div>
@@ -161,7 +147,7 @@ include('dbconnect.php');
 			}
 		}
 		if($flag==8)
-		echo "you have no classes today";	
+		{echo "<h1>YOU HAVE NO CLASSES TODAY</h1>";}	
 }
 ?>
 

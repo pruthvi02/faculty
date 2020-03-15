@@ -64,7 +64,7 @@ $sid=$_SESSION['sid'];
                             <br />
                             <em class="	glyphicon glyphicon-list"></em>Subjects:<?php echo $subject ?> 
                         </p>
-                        <!-- Split button -->
+                        
                     </div>
 					<div class="container-login100-form-btn m-t-32">
 						

@@ -1,3 +1,10 @@
+<html>
+    <body background='images/bg-06.jpg')>
+</body>
+</html>
+
+<div style="background-image: url('images/bg-06.jpg')">
+</div>
 <?php
 
 session_start();
@@ -35,6 +42,4 @@ $uid=$_SESSION['sid'];
             $message = "No tutorials are scheduled for today";
             echo "<script type='text/javascript'>alert('$message');</script>";
        }
-     //header("Location:home.php");
-
     ?>

@@ -1,15 +1,9 @@
-<?php
-session_start();
-include('dbconnect.php');  
-$sid=$_SESSION['sid'];
+<html>
+    <body background='images/bg-06.jpg')>
+</body>
+</html>
 
-        $sql = "SELECT * FROM teacher_info WHERE tid='$sid'";
-        $run_query=mysqli_query($conn,$sql);
-        $row=mysqli_fetch_array($run_query);
-        $name=$row['name'];
-
-
-?>
+<div style="background-image: url('images/bg-06.jpg');
 <div id="TT" style="background-color: #FFFFFF">
         <table border="2" style="align: center" id="timetable">
             <caption><strong><br><br>
@@ -28,6 +22,16 @@ $sid=$_SESSION['sid'];
             </tr>
             <tr>
                 <?php
+
+session_start();
+include('dbconnect.php');  
+$sid=$_SESSION['sid'];
+
+        $sql = "SELECT * FROM teacher_info WHERE tid='$sid'";
+        $run_query=mysqli_query($conn,$sql);
+        $row=mysqli_fetch_array($run_query);
+        $name=$row['name'];
+
 
                 $qq = mysqli_query($conn,
                 "SELECT * FROM " . $name ."");
@@ -61,6 +65,6 @@ $sid=$_SESSION['sid'];
                 top: 225px;
                 }
 </style>
-                <button type="button">download</button>
                 
     </div>
+            </div>

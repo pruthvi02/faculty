@@ -10,6 +10,12 @@ $sid=$_SESSION['sid'];
 
 
 ?>
+<html>
+    <body background='images/bg-06.jpg')>
+</body>
+</html>
+
+<div style="background-image: url('images/bg-06.jpg');
 <div id="TT" style="background-color: #FFFFFF">
         <table border="2" style="align: center" id="timetable">
             <caption><strong><br><br>
@@ -23,11 +29,11 @@ $sid=$_SESSION['sid'];
             </tr>
             <tr>
                 <?php
-            $var='statistics';
+            
                 $qqt = mysqli_query($conn,
-                "SELECT * FROM ".$var." WHERE teacher-name=$name'");
+                "SELECT * FROM statistics WHERE teacher_name='$name'");
             $str = "<br>";
-                echo $qqt;
+                
             while ($row = mysqli_fetch_assoc($qqt)) {
 
                 echo "
@@ -48,6 +54,6 @@ $sid=$_SESSION['sid'];
                 top: 225px;
                 }
 </style>
-                <button type="button">download</button>
                 
     </div>
+            </div>

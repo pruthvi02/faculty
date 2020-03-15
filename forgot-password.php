@@ -3,7 +3,7 @@ session_start();
 include('dbconnect.php');
 error_reporting(0);
 include("include/config.php");
-//Checking Details for reset password
+
 if(isset($_POST['submit'])){
 $name=$_POST['fullname'];
 $email=$_POST['email'];
@@ -56,10 +56,7 @@ echo "<script>window.location.href ='forgot-password.php'</script>";
 				<div class="box-login">
 					<form class="form-login" method="post">
 						<fieldset>
-							<p>
-								Please enter your Email and password to recover your password.<br />
-					
-							</p>
+						<legend>Please Enter Your Details.</legend>
 
 							<div class="form-group form-actions">
 								<span class="input-icon">
@@ -113,6 +110,5 @@ echo "<script>window.location.href ='forgot-password.php'</script>";
 			});
 		</script>
 	
-	</body>
-	<!-- end: BODY -->
+		</body>
 </html>
