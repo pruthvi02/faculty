@@ -53,7 +53,7 @@ include('dbconnect.php');
 <div>
 
 	<div class="limiter">
-		
+
 			<nav class="navbar navbar-expand-md navbar-dark	 bg-dark">
                 <a href="display1.php" class="navbar-brand" title="click to view your timetable">Timetable</a>
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
@@ -62,6 +62,7 @@ include('dbconnect.php');
             
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav">
+					<a href="https://drive.google.com/open?id=1Wvdnc9AIYGOldBh2ZUW88k4F-QIR_Pvb" class="nav-item nav-link" title="click to get a basic idea about the project">TOUR</a>
 						<a href="logout.php" class="nav-item nav-link" >Logout</a>
 						<a href="profile.php" class="nav-item nav-link" title="click to view/update your profile">Profile</a>
 						<a href="notes.html" class="nav-item nav-link">Write Notes</a>
@@ -117,6 +118,8 @@ include('dbconnect.php');
 		<?php
 
 			$today=date("l");
+			
+			echo "<h3>WELCOME $name...</h3>";
 			$todaymod=strtolower($today);
 
 	

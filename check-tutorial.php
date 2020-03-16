@@ -26,7 +26,7 @@ $uid=$_SESSION['sid'];
     $curdate=date("Y-m-d")  ;            
                      
 
-	$qq = mysqli_query($conn, "SELECT * FROM tutorial WHERE date ='$curdate'");
+	$qq = mysqli_query($conn, "SELECT * FROM tutorial WHERE date ='$curdate' and name='$name'");
       $row = mysqli_fetch_array($qq);
       $tutno=$row['tutorialno'];
     
